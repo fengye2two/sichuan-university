@@ -1,0 +1,12 @@
+date=load('D:/object_tracking/data/1time_IOU.txt')
+x=date(:,1);
+y=date(:,2);
+z=date(:,3);
+[AX,H1,H2]=plotyy(x,y,x,z,'plot')
+set(H1,'color','g')
+set(H2,'color','r')
+grid on
+xlabel('interval');
+set(get(AX(1),'Ylabel'),'String','IOU')
+set(get(AX(2),'Ylabel'),'String','speed x')
+title('detect and track')
